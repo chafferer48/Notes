@@ -1,0 +1,32 @@
+git版本：git --version 
+初始化仓库：git init 
+配置用户名和密码：git config --global user.name hanmeimei
+		 git config --global user.email chafferer48@gmail.com
+查看状态：git status
+添加到暂存区：git add index.html
+提交文件：git commit -m "上传了index.html文件"
+查看日志： git log （可以看到项目的版本信息，包括提交人，提交时间和修改的文件等信息）
+本地仓库关联GitHub上的仓库 ：git remote add origin http://
+本地项目的提交push到GitHub ：git push -u origin master //push到origin主机的master分支
+查看更新文件的内容：git diff index.html
+版本回退：
+	只显示版本号和版本描述信息：git log --pretty=oneline
+	版本回退：git reset --hard HEAD~1 //修改数字决定回退的版本
+	取消版本回退：gitreflog //查看版本的回退记录
+		     git reset --hard 版本号（第二行的首个数据）
+	添加多个文件git add .
+
+分支： 
+查看本地分支：git branch
+查看远程分支：git branch -r
+查看所有分支：git branch -a
+本地创建新的分支：git branch [branch name]
+切换到新的分支：git checkout [branch name]
+创建+切换分支：git checkout -b [branch name]
+将新分支推送到github：git push origin [branch name]
+删除本地分支：git branch -d [branch name]
+删除github远程分支：git push origin :[branch name]
+                   git push origin --delete [branch name]
+重命名远程分支：在git中重命名远程分支，其实就是先删除远程分支，然后重命名本地分支，再重新提交一个远程分支。
+
+忽略某个文件的上传：在 .gitignore 文件中写入该忽略文件/文件夹的名字即可

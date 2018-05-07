@@ -1,0 +1,8 @@
+初始化mysql： /usr/local/mysql/scripts/mysql_install_db --user=mysql --basedir=/usr/local/webserver/mysql --datadir=/www/data_mysql
+
+
+给myql添加权限：chown -R mysql.mysql /usr/local/webserver/mysql
+
+
+建立软连接：ln -s /usr/local/webserver/mysql/bin/mysqladmin /usr/bin
+
